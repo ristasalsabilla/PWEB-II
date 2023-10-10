@@ -25,6 +25,25 @@ class database
 
     function tambah_mhs($nim, $nama, $alamat)
     {
-        mysqli_query($this->koneksi, "insert into mahasiswa(nim, nama, alamat) values('$nim', '$nama', '$alamat')");
+        mysqli_query($this->koneksi, "insert into mahasiswa (nim, nama, alamat) values('$nim', '$nama', '$alamat')");
+    }
+
+    function edit($id)
+    {
+        $data = mysqli_query($this->koneksi, "select * from mahasiswa where id='$id'");
+        while ($d = mysqli_fetch_array($data)) {
+            $hasil[] = $d;
+        }
+        return $hasil;
+    }
+
+    function update($id, $nim, $nama, $alamat)
+    {
+        mysqli_query($this->koneksi, "update mahasiswa set nim='$nim', nama='$nama', alamat='$alamat' where id='$id'");
+    }
+
+    function hapus($id)
+    {
+        mysqli_query($this->koneksi, "delete from mahasiswa where id='$id'");
     }
 }
