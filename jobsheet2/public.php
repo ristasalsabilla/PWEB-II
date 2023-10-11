@@ -3,18 +3,19 @@
 //membuat class mahasiswa
 class mahasiswa
 {
-    // property public dan private
+    // mendefinisikan property dengan tipe public dan private
     public $nama;
     private $nim = "220302043";
 
     // public method, tanpa menuliskan public maka sudah otomatis menjadi public
+    // method untuk menampilkan nama
     function tampilkan_nama()
     {
         // nilai kembalian
         return "Nama Saya Rista </br>";
     }
 
-    // method
+    // method untuk menampilkan nim
     function tampilkan_nim()
     {
         return "NIM Saya " . $this->nim;

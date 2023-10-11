@@ -1,9 +1,9 @@
 <?php
 
-// nama class
+// membuat nama class database
 class database
 {
-    // menuliskan property atau atribut
+    // mendefinisikan property atau atribut
     var $host = "localhost";
     var $username = "root";
     var $password = "";
@@ -27,11 +27,13 @@ class database
         return $hasil;
     }
 
+    // method untuk tambah dosen
     function tambah_dosen($nidn, $nama, $tempat_lahir, $alamat)
     {
         mysqli_query($this->koneksi, "insert into dosen (nidn, nama, tempat_lahir, alamat) values('$nidn', '$nama', '$tempat_lahir', '$alamat')");
     }
 
+    // method untuk mengedit data dosen
     function edit($id)
     {
         $data = mysqli_query($this->koneksi, "select * from dosen where id='$id'");
@@ -41,11 +43,13 @@ class database
         return $hasil;
     }
 
+    // method untuk update data dosen
     function update($id, $nidn, $nama, $tempat_lahir, $alamat)
     {
         mysqli_query($this->koneksi, "update dosen set nidn='$nidn', nama='$nama', tempat_lahir='$tempat_lahir', alamat='$alamat' where id='$id'");
     }
 
+    // method untuk hapus data dosen
     function hapus($id)
     {
         mysqli_query($this->koneksi, "delete from dosen where id='$id'");

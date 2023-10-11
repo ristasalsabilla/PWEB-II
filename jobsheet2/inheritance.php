@@ -1,9 +1,9 @@
 <?php
 
-// membuat class
+// membuat class manusia
 class manusia
 {
-    // property atau atribut dengan tipe public dan protected
+    // mendefinisikan property atau atribut dengan tipe public dan protected
     public $nama_saya;
     protected $jenis_kelamin;
 
@@ -37,7 +37,7 @@ class mahasiswa extends manusia
     }
 }
 
-//intansiasi class mahasiswa'
+//instansiasi class mahasiswa
 $informatika = new mahasiswa();
 $prodi = new mahasiswa();
 

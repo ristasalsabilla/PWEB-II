@@ -1,6 +1,6 @@
 <?php
 
-// // membuat class 
+// // membuat class mahasiswa
 // class mahasiswa
 // {
 //     // menuliskan property atau atribut
@@ -27,6 +27,7 @@
 // // menampilkan objek ke layar
 // echo $nama_mahasiswa->tampil_nama();
 
+// membuat class dosen
 class dosen
 {
     // menuliskan property atau atribut

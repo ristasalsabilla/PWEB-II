@@ -27,7 +27,7 @@
     if (isset($_POST['submit'])) {
         // untuk mengambil nilai x dari nilai yang diinputkan
         $x = $_POST["x"];
-
+        // untuk menampilkan hasil
         echo "Nilai x = $x </br></br>";
         if ($x > 0) {
             echo "$x adalah Bilangan Positif";

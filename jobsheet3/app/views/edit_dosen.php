@@ -1,4 +1,5 @@
 <?php
+// memasukkan isi file databasedosen
 include '../classes/databasedosen.php';
 $db = new database(); // objek baru
 ?>
@@ -8,11 +9,12 @@ $db = new database(); // objek baru
 <!-- tombol kembali -->
 <a class="btn btn-success" href="tampil_dosen.php">Kembali</a>
 <br>
-<!-- membuat form -->
+<!-- membuat form untuk edit data dosen -->
 <form action="proses_dosen.php?aksi=update" method="post">
     <?php
-    foreach ($db->edit($_GET['id']) as $d) {
 
+    // perulangan untuk mengambil data dosen
+    foreach ($db->edit($_GET['id']) as $d) {
 
     ?>
         <div class="px-3 mb-3">

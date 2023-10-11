@@ -29,6 +29,7 @@
         return 3.14 * $r * $r;
     }
 
+    // inisialisasi variabel luas persegi panjang dan luas lingkaran
     $luas_persegipanjang = 0;
     $luas_lingkaran = 0;
 
@@ -54,6 +55,7 @@
         <input type="submit" name="submit" value="Hitung">
     </form>
     <?php
+    // menampilkan hasil
     echo "Luas Persegi Panjang = " . $luas_persegipanjang . " cm2</br>";
     echo "Luas Lingkaran = " . $luas_lingkaran . " cm2</br>";
     ?>

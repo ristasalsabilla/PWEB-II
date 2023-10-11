@@ -1,9 +1,9 @@
 <?php
 
-// membuat class 
+// membuat class mahasiswa
 class mahasiswa
 {
-    // menuliskan property atau atribut
+    // mendefinisikan property atau atribut
     var $nim;
     var $nama;
     var $alamat;

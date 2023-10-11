@@ -1,7 +1,7 @@
 <?php
-// memanggil class database
+// menghubungkan ke file database
 include '../classes/database.php';
-//instansiasi class database 
+// objek database baru
 $db = new database;
 ?>
 
@@ -13,6 +13,7 @@ $db = new database;
 </head>
 
 <div class="px-3 py-3">
+    <!-- membuat navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">SIAKAD</a>
@@ -40,12 +41,14 @@ $db = new database;
     </nav>
 
     <?php
+    // memeriksa pesan yang diberikan dan menampilkan pesan yang sesuai
     if (isset($_GET['pesan']) && $_GET['pesan'] == 'berhasil') {
     ?>
         <div class="alert alert-success mx-auto text-center" style="width:20%" role="alert">
             Data <a href="#" class="alert-link">BERHASIL</a> di tambahkan
         </div>
     <?php
+        // menampilkan halaman tampil_mhs.php selama 2 detik
         header("refresh:2, url=tampil_mhs.php");
     } elseif (isset($_GET['pesan']) && $_GET['pesan'] == 'sukses') {
     ?>
@@ -66,8 +69,10 @@ $db = new database;
 
     <div class="px-5">
         <h2>Data Mahasiswa</h2>
+        <!-- tombol tambah data mahasiswa -->
         <a class="btn btn-primary mb-2 mt-2" href="input_mhs.php">Tambah Mahasiswa</a>
         <br>
+        <!-- tabel data mahasiswa -->
         <table class="table">
             <tr>
                 <th>No</th>
@@ -79,6 +84,7 @@ $db = new database;
 
             <?php
             $no = 1;
+            // perulangan untuk menampilkan data mahasiswa
             foreach ($db->tampil_mahasiswa() as $x) {
             ?>
                 <tr>
@@ -87,7 +93,9 @@ $db = new database;
                     <td><?php echo $x['nama'] ?></td>
                     <td><?php echo $x['alamat'] ?></td>
                     <td>
+                        <!-- tombol edit data mahasiswa -->
                         <a class="btn btn-warning" href="edit_mhs.php?id=<?php echo $x['id']; ?>&aksi=edit">Edit</a>
+                        <!-- tombol hapus data mahasiswa -->
                         <a class="btn btn-danger" href="proses_mhs.php?id=<?php echo $x['id']; ?>&aksi=hapus">Hapus</a>
                     </td>
                 </tr>
