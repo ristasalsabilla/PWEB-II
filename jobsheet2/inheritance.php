@@ -1,17 +1,19 @@
 <?php
 
-use mahasiswa as GlobalMahasiswa;
-
+// membuat class
 class manusia
 {
+    // property atau atribut dengan tipe public dan protected
     public $nama_saya;
     protected $jenis_kelamin;
 
+    // method untuk nama
     function panggil_nama($saya)
     {
         $this->nama_saya = $saya;
     }
 
+    // method untuk jenis kelamin
     function panggil_jk()
     {
         return "Saya berjenis kelamin : Wanita";

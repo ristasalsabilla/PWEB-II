@@ -1,22 +1,18 @@
 <?php
 
-// membuat class
 class database
 {
-    // menuliskan property atau atribut
     var $host = "localhost";
     var $username = "root";
     var $password = "";
     var $db = "akademik";
     var $koneksi;
 
-    // construct = dipanggil atau dieksekusi pertama kali, ditampilkan di paling atas 
     function __construct()
     {
         $this->koneksi = mysqli_connect($this->host, $this->username, $this->password, $this->db);
     }
 
-    // method untuk menampilkan mahasiswa
     function tampil_mahasiswa()
     {
         $data = mysqli_query($this->koneksi, "select * from mahasiswa");

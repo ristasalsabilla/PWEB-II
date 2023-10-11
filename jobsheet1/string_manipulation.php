@@ -8,8 +8,9 @@
 
 <body>
     <?php
+    // mendeklarasikan $date
     $date = "Hari ini Senin, tanggal 09-10-2023 </br>";
-    echo $date;
+    echo $date; // menampilkan date
     echo strtoupper($date);
     // strtolower() nilai string menjadi huruf kecil
     echo strtolower($date);

@@ -8,14 +8,14 @@ class mahasiswa
     var $nama;
     var $alamat;
 
-    // dipanggil atau dieksekusi pertama kali, ditampilkan di paling atas
+    // construct = dipanggil atau dieksekusi pertama kali, ditampilkan di paling atas
     function __construct()
     {
         echo "Saya Mahasiswa Teknik Informatika";
         echo "<br>";
     }
 
-    // dipanggil atau dieksekusi diakhir, ditampilkan di paling akhir
+    // destruct = dipanggil atau dieksekusi diakhir, ditampilkan di paling akhir
     function __destruct()
     {
         echo "<br>Politeknik Negeri Cilacap";
@@ -27,9 +27,10 @@ class mahasiswa
         return "Nama Saya adalah Rista </br>"; // isi method
     }
 
+    // method untuk menampilkan mahasiswa
     function tampil_mahasiswa()
     {
-        return "Tidak akan menjadi joki atau menggunakan jasa joki sampai lulus kuliah";
+        return "Tidak akan menjadi joki atau menggunakan jasa joki sampai lulus kuliah"; // isi method
     }
 
     // method untuk menampilkan alamat

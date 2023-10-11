@@ -1,7 +1,9 @@
 <?php
+// untuk menghubungkan ke databasedosen
 include '../classes/databasedosen.php';
-$db = new database();
+$db = new database(); // inisiasi
 
+// untuk mengeksekusi "aksi"
 $aksi = $_GET['aksi'];
 if ($aksi == "tambah") {
     $db->tambah_dosen($_POST['nidn'], $_POST['nama'], $_POST['tempat_lahir'], $_POST['alamat']);

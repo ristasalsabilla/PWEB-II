@@ -23,7 +23,7 @@
     echo "</br>Perulangan DO WHILE bilangan prima dari 1 hingga 20 </br>";
     $z = 2; // Mulai dari angka 2, bilangan prima paling kecil
 
-    do {
+    do { // perulangan
         $prima = true; // Anggap dulu bahwa angka tersebut adalah prima
 
         for ($i = 2; $i < $z; $i++) {

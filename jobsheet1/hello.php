@@ -8,6 +8,7 @@
 
 <body>
     <?php
+    // untuk menampilkan "Hello, World!" pada layar
     echo "Hello, World!";
     ?>
 </body>

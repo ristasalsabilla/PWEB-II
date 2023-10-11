@@ -1,15 +1,14 @@
 <?php
-include '../classes/databasedosen.php';
-$db = new database(); // objek baru
+include '../classes/database.php';
+$db = new database();
 ?>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<h3>Edit Data Dosen</h3>
-<!-- tombol kembali -->
-<a class="btn btn-success" href="tampil_dosen.php">Kembali</a>
+<h3>Edit Data Mahasiswa</h3>
+<a class="btn btn-success" href="tampil_mhs.php">Kembali</a>
 <br>
-<!-- membuat form -->
-<form action="proses_dosen.php?aksi=update" method="post">
+
+<form action="proses_mhs.php?aksi=update" method="post">
     <?php
     foreach ($db->edit($_GET['id']) as $d) {
 
@@ -19,29 +18,19 @@ $db = new database(); // objek baru
             <table>
                 <tr>
                     <td>
-                        <!-- untuk menampilkan NIDN ke layar -->
-                        <label for="disabledTextInput" class="form-label">NIDN</label>
-                        <input type="text" id="disabledTextInput" class="form-control" name="nidn" value="<?php echo $d['nidn'] ?>" placeholder="Masukkan NIDN">
+                        <label for="disabledTextInput" class="form-label">NIM</label>
+                        <input type="text" id="disabledTextInput" class="form-control" name="nim" value="<?php echo $d['nim'] ?>" placeholder="Masukkan NIM">
                         <input type="hidden" name="id" value="<?php echo $d['id'] ?>">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <!-- untuk menampilkan Nama ke layar -->
                         <label for="disabledTextInput" class="form-label">Nama</label>
                         <input type="text" id="disabledTextInput" class="form-control" name="nama" value="<?php echo $d['nama'] ?>" placeholder="Masukkan Nama">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <!-- untuk menampilkan Tempat Lahir ke layar -->
-                        <label for="disabledTextInput" class="form-label">Tempat Lahir</label>
-                        <input type="text" id="disabledTextInput" class="form-control" name="tempat_lahir" value="<?php echo $d['tempat_lahir'] ?>" placeholder="Masukkan Tempat Lahir">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <!-- untuk menampilkan Alamat ke layar -->
                         <label for="disabledTextInput" class="form-label">Alamat</label>
                         <textarea class="form-control" id="disabledTextInput" class="form-control" name="alamat" cols="30" rows="5" placeholder="Masukkan Alamat"><?php echo $d['alamat'] ?></textarea>
                     </td>
@@ -51,7 +40,6 @@ $db = new database(); // objek baru
         <div class="px-3 mt-3">
             <tr>
                 <td></td>
-                <!-- tombol simpan -->
                 <td><input type="submit" class="btn btn-primary" value="Simpan"></td>
             </tr>
         </div>

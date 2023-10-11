@@ -19,6 +19,7 @@
     // echo "Luas Persegi Panjang = " . persegi_panjang(5, 2) . "</br>";
     // echo "Luas Lingkaran = " . lingkaran(7) . "</br>";
 
+    // method untuk mencari luas persegi panjang dan lingkaran
     function persegi_panjang($p, $l)
     {
         return $p * $l;
@@ -32,11 +33,11 @@
     $luas_lingkaran = 0;
 
     if (isset($_POST['submit'])) {
-        // Mendapatkan nilai panjang dan lebar dari formulir
+        // Mendapatkan nilai panjang dan lebar
         $p = $_POST['panjang'];
         $l = $_POST['lebar'];
 
-        // Mendapatkan nilai jari-jari dari formulir
+        // Mendapatkan nilai jari-jari
         $r = $_POST['jari_jari'];
 
         // Menghitung luas persegi panjang dan lingkaran
@@ -44,6 +45,8 @@
         $luas_lingkaran = lingkaran($r);
     }
     ?>
+
+    <!-- form untuk memasukkan panjang, lebar, dan jari-jari -->
     <form method="post" action="">
         Masukkan panjang Persegi Panjang: <input type="number" name="panjang" required><br>
         Masukkan lebar Persegi Panjang: <input type="number" name="lebar" required><br>
